@@ -34,7 +34,6 @@ class Sextou extends StatelessWidget {
               ],
             ),
           ),
-          //Expanded(child: Container()),
           IconButton(
             onPressed: () {
               onRemove();

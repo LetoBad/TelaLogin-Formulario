@@ -61,17 +61,14 @@ class _Tela1State extends State<Tela1> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 25),
-                  //NOME
-                  TextField(
+                                    TextField(
                     controller: nomeController,
                     decoration: InputDecoration(label: Text("Nome")),
                   ),
-                  //SOBRENOME
                   TextField(
                     controller: sobrenomeController,
                     decoration: InputDecoration(label: Text("Sobrenome")),
                   ),
-                  //IDADE (*TextField com mascara apenas para números)
                   TextField(
                     controller: idadeController,
                     keyboardType: TextInputType.number,
@@ -83,8 +80,7 @@ class _Tela1State extends State<Tela1> {
                       label: Text("Idade"),
                     ),
                   ),
-                  //CPF
-                  TextField(
+                    TextField(
                     controller: cpfController,
                     decoration: InputDecoration(
                       label: Text("CPF"),
@@ -111,7 +107,6 @@ class _Tela1State extends State<Tela1> {
                               cpf: cpfController.text));
                         });
                         Navigator.pop(context);
-                        //LIMPAR INFOS DO MODAL
                         nomeController.clear();
                         sobrenomeController.clear();
                         idadeController.clear();
