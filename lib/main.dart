@@ -31,25 +31,19 @@ class _Tela1State extends State<Tela1> {
   List<Pessoa> lista = [
     Pessoa(
         nome: "Thiago", idade: 22, sobrenome: "Torres", cpf: "000.000.000-00"),
-    Pessoa(
-        nome: "Leto", idade: 22, sobrenome: "Bad", cpf: "000.000.000-00"),
+    Pessoa(nome: "Leto", idade: 22, sobrenome: "Bad", cpf: "000.000.000-00"),
   ];
-
 
   final TextEditingController nomeController = TextEditingController();
   final TextEditingController sobrenomeController = TextEditingController();
   final TextEditingController idadeController = TextEditingController();
   final TextEditingController cpfController = TextEditingController();
 
-
   void removerItem(int index) {
     setState(() {
       lista.removeAt(index);
     });
   }
-
-
-
 
   void openModal() {
     showModalBottomSheet(
@@ -99,8 +93,8 @@ class _Tela1State extends State<Tela1> {
                   SizedBox(height: 35),
                   ElevatedButton(
                       style: ButtonStyle(
-                          backgroundColor:
-                              WidgetStatePropertyAll(const Color.fromARGB(255, 66, 177, 32)),
+                          backgroundColor: WidgetStatePropertyAll(
+                              const Color.fromARGB(255, 66, 177, 32)),
                           foregroundColor: WidgetStatePropertyAll(Colors.white),
                           shape: WidgetStatePropertyAll(
                             RoundedRectangleBorder(
@@ -110,16 +104,13 @@ class _Tela1State extends State<Tela1> {
                           minimumSize: WidgetStatePropertyAll(Size(300, 50))),
                       onPressed: () {
                         setState(() {
-                          lista.add(
-                            Pessoa(
-                              nome: nomeController.text, 
-                              idade: int.parse(idadeController.text), 
-                              sobrenome: sobrenomeController.text, 
-                              cpf: cpfController.text
-                              )
-                          );
+                          lista.add(Pessoa(
+                              nome: nomeController.text,
+                              idade: int.parse(idadeController.text),
+                              sobrenome: sobrenomeController.text,
+                              cpf: cpfController.text));
                         });
-                            Navigator.pop(context);
+                        Navigator.pop(context);
                         //LIMPAR INFOS DO MODAL
                         nomeController.clear();
                         sobrenomeController.clear();
