@@ -146,7 +146,7 @@ class _Tela1State extends State<Tela1> {
           openModal();
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Color.fromARGB(255, 66, 177, 32),
       ),
     );
   }
